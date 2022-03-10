@@ -11,6 +11,13 @@ import javax.persistence.*;
     변해야 하는지 코드상으로 명확하게 구분할 수가 없다
     그래서 Entity 클래스에서는 Setter을 절대 만들지 않는다 
 */
+
+/*
+    Entity 는
+    데이터베이스에 직접적으로 접근하는 클래스이기 때문에
+    Entity 클래스에서는 Request,Response 클래스로 활용해서는 안된다
+ */
+
 @Getter
 @NoArgsConstructor // 기본생성자  public Posts() {} 쓴것과 똑같은 효과를 준다
 @Entity //테이블에 링크될 클래스임을 나타낸다
