@@ -28,6 +28,7 @@ public class PostsSaveRequestDto {
                 .author(author)
                 .content(content)
                 .build();
+
     }
 
 }
