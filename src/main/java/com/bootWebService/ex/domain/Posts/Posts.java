@@ -1,5 +1,6 @@
 package com.bootWebService.ex.domain.Posts;
 
+import com.bootWebService.ex.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,7 +22,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor // 기본생성자  public Posts() {} 쓴것과 똑같은 효과를 준다
 @Entity //테이블에 링크될 클래스임을 나타낸다
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
 
     @Id //해당 테이블의 PK필드를 나타낸다

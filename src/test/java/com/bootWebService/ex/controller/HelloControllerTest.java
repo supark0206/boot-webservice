@@ -11,8 +11,10 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@RunWith(SpringRunner.class)//테스트를 진행할 때 Junit
+//@RunWith(SpringRunner.class)//테스트를 진행할 때 Junit
 
+
+/*
 //Web(spring Mcv)에 집중할 수 있는 어노테이션
 //@Service,@Componet,@Repository 등은 사용할 수 없다, 여기서는 컨트롤러만 사용하기 때문에 선언
 @WebMvcTest(controllers = HelloController.class) 
@@ -49,4 +51,4 @@ public class HelloControllerTest {
     }
 
 
-}
+}*/
