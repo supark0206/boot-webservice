@@ -1,5 +1,6 @@
 package com.bootWebService.ex.controller;
 
+import com.bootWebService.ex.config.auth.dto.SessionUser;
 import com.bootWebService.ex.dto.PostsResponseDto;
 import com.bootWebService.ex.service.PostsService;
 import com.sun.org.apache.xpath.internal.operations.Mod;
@@ -11,14 +12,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpSession;
+
 @RequiredArgsConstructor
 @Controller
 public class IndexController {
     private final PostsService postsService;
+    private final HttpSession httpSession;
 
     @GetMapping("/")
     public String index(Model model){
         model.addAttribute("posts",postsService.findAllDesc());
+        SessionUser user = (SessionUser) httpSession.getAttribute("user");
+        if(user != null){
+            model.addAttribute("userName",user.getName());
+        }
         return "index";
     }
 
